@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Finanzas Personales México 2025 | Tarjetas de Crédito e Inversiones
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #4361ee;
+        --secondary: #3f37c9;
+        --accent: #4895ef;
+        --success: #4cc9f0;
+        --light: #f8f9fa;
+        --dark: #212529;
+        --warning: #f72585;
+        --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        --transition: all 0.3s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        color: var(--dark);
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        min-height: 100vh;
+        padding-bottom: 60px;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 15px;
+      }
+
+      /* Header Styles */
+      header {
+        background: white;
+        border-radius: 20px;
+        padding: 25px 20px;
+        margin: 15px 0 25px;
+        box-shadow: var(--card-shadow);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(
+          90deg,
+          var(--primary),
+          var(--accent),
+          var(--success)
+        );
+      }
+
+      h1 {
+        color: var(--primary);
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      .subtitle {
+        color: #6c757d;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Navigation */
+      .nav-container {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        border-radius: 15px;
+        margin-bottom: 20px;
+        padding: 5px;
+      }
+
+      .nav-buttons {
+        display: flex;
+        overflow-x: auto;
+        scrollbar-width: none;
+        padding: 5px 0;
+        gap: 8px;
+      }
+
+      .nav-buttons::-webkit-scrollbar {
+        display: none;
+      }
+
+      .nav-btn {
+        background: white;
+        color: var(--dark);
+        border: 2px solid #e9ecef;
+        padding: 12px 18px;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 0.95rem;
+        font-weight: 600;
+        transition: var(--transition);
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .nav-btn:hover {
+        border-color: var(--accent);
+        color: var(--primary);
+      }
+
+      .nav-btn.active {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+      }
+
+      .nav-btn i {
+        margin-right: 8px;
+        font-size: 1.1rem;
+      }
+
+      /* Section Styles */
+      .section {
+        display: none;
+        background: white;
+        border-radius: 20px;
+        padding: 25px 20px;
+        margin-bottom: 25px;
+        box-shadow: var(--card-shadow);
+        animation: fadeIn 0.4s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .section.active {
+        display: block;
+      }
+
+      h2 {
+        color: var(--primary);
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid var(--success);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      h2 i {
+        background: var(--success);
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+      }
+
+      h3 {
+        color: var(--secondary);
+        font-size: 1.4rem;
+        margin: 25px 0 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      h3 i {
+        color: var(--accent);
+      }
+
+      /* Card Grid */
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin: 20px 0;
+      }
+
+      .card {
+        background: white;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: var(--card-shadow);
+        transition: var(--transition);
+        border: 1px solid #e9ecef;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, var(--accent), var(--success));
+      }
+
+      .card h4 {
+        color: var(--primary);
+        margin-bottom: 12px;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .card h4 i {
+        font-size: 1.1rem;
+        color: var(--secondary);
+      }
+
+      .card .badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: var(--primary);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      /* Investment Table */
+      .investment-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .investment-table th {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        font-weight: 600;
+        text-align: left;
+        padding: 15px;
+      }
+
+      .investment-table td {
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .investment-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .investment-table tr:hover {
+        background-color: #f1f8ff;
+      }
+
+      /* Interactive Elements */
+      .expandable {
+        background: #f8f9fa;
+        border-radius: 12px;
+        margin: 20px 0;
+        overflow: hidden;
+      }
+
+      .expandable-header {
+        padding: 15px 20px;
+        background: linear-gradient(90deg, #f0f5ff, #e6f7ff);
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .expandable-content {
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+      }
+
+      .expandable-content.show {
+        padding: 20px;
+        max-height: 1000px;
+      }
+
+      /* Calculator */
+      .calculator {
+        background: linear-gradient(135deg, #f0f7ff 0%, #e6f4ff 100%);
+        padding: 25px;
+        border-radius: 20px;
+        margin: 25px 0;
+        border: 1px solid #d1e7ff;
+      }
+
+      .calc-group {
+        margin-bottom: 20px;
+      }
+
+      .calc-label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: var(--primary);
+      }
+
+      .calc-input {
+        width: 100%;
+        padding: 14px;
+        border: 2px solid #dee2e6;
+        border-radius: 12px;
+        font-size: 1rem;
+        transition: var(--transition);
+      }
+
+      .calc-input:focus {
+        border-color: var(--accent);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+      }
+
+      .calc-result {
+        background: var(--primary);
+        color: white;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 20px;
+        font-weight: 600;
+        text-align: center;
+        display: none;
+      }
+
+      .calc-result.show {
+        display: block;
+      }
+
+      /* Info Boxes */
+      .info-box {
+        border-radius: 15px;
+        padding: 20px;
+        margin: 20px 0;
+        position: relative;
+      }
+
+      .tip {
+        background: #e8f4f8;
+        border-left: 4px solid var(--success);
+      }
+
+      .warning {
+        background: #fff3cd;
+        border-left: 4px solid #ffc107;
+        padding: 25px;
+        border-radius: 15px;
+      }
+
+      .highlight {
+        background: linear-gradient(135deg, #4361ee, #4895ef);
+        color: white;
+        padding: 25px;
+        border-radius: 20px;
+        margin: 25px 0;
+        box-shadow: 0 8px 20px rgba(67, 97, 238, 0.25);
+      }
+
+      /* Alert Styles */
+      .alert-list {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 20px;
+      }
+
+      .alert-list li {
+        padding: 15px;
+        margin-bottom: 15px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        transition: all 0.3s ease;
+        border-left: 4px solid #ffc107;
+      }
+
+      .alert-list li:hover {
+        transform: translateX(5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .alert-list i {
+        font-size: 1.5rem;
+        color: #ffc107;
+        min-width: 30px;
+        text-align: center;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 25px;
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin-top: 30px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: var(--card-shadow);
+      }
+
+      .developer-info {
+        margin-top: 25px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .developer-info a {
+        color: var(--primary);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .developer-info a:hover {
+        color: var(--secondary);
+        transform: translateY(-2px);
+      }
+
+      /* Mobile Optimization */
+      @media (max-width: 768px) {
+        .container {
+          padding: 10px;
+        }
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        .card-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .calculator {
+          padding: 20px;
+        }
+
+        .nav-btn {
+          padding: 10px 15px;
+          font-size: 0.85rem;
+        }
+
+        .investment-table,
+        .investment-table th,
+        .investment-table td {
+          font-size: 0.85rem;
+          padding: 10px;
+        }
+
+        .alert-list li {
+          padding: 12px;
+          font-size: 0.95rem;
+        }
+      }
+
+      /* Scroll to top button */
+      .scroll-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: var(--primary);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: var(--transition);
+        z-index: 200;
+      }
+
+      .scroll-top.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><i class="fas fa-wallet"></i> Finanzas Personales México 2025</h1>
+        <p class="subtitle">
+          Guía completa sobre tarjetas de crédito e inversiones de bajo riesgo
+          para principiantes
+        </p>
+        <p><strong>Actualizado: Julio 2025</strong></p>
+      </header>
+
+      <div class="nav-container">
+        <div class="nav-buttons">
+          <button class="nav-btn active" onclick="showSection('intro')">
+            <i class="fas fa-home"></i> Inicio
+          </button>
+          <button class="nav-btn" onclick="showSection('tarjetas')">
+            <i class="fas fa-credit-card"></i> Tarjetas
+          </button>
+          <button class="nav-btn" onclick="showSection('comparativa')">
+            <i class="fas fa-chart-bar"></i> Comparativa
+          </button>
+          <button class="nav-btn" onclick="showSection('inversiones')">
+            <i class="fas fa-chart-line"></i> Inversiones
+          </button>
+          <button class="nav-btn" onclick="showSection('consejos')">
+            <i class="fas fa-lightbulb"></i> Consejos
+          </button>
+        </div>
+      </div>
+
+      <!-- Sección de Introducción -->
+      <div id="intro" class="section active">
+        <h2>
+          <i class="fas fa-info-circle"></i> Introducción a las Finanzas
+          Personales
+        </h2>
+
+        <div class="highlight">
+          <h3>Panorama Financiero en México 2025</h3>
+          <p>
+            La inclusión financiera ha crecido al 45%, pero aún 55% de mexicanos
+            no tienen acceso a servicios financieros formales. Entender las
+            tarjetas de crédito e inversiones básicas es clave para mejorar tu
+            salud financiera.
+          </p>
+        </div>
+
+        <h3><i class="fas fa-bullseye"></i> Objetivos de esta Guía</h3>
+        <div class="card-grid">
+          <div class="card">
+            <h4><i class="fas fa-graduation-cap"></i> Educación Financiera</h4>
+            <p>
+              Comprender conceptos esenciales sobre tarjetas de crédito y su
+              funcionamiento en el sistema mexicano.
+            </p>
+          </div>
+          <div class="card">
+            <h4><i class="fas fa-credit-card"></i> Selección Inteligente</h4>
+            <p>
+              Identificar las mejores tarjetas según tu perfil crediticio y
+              necesidades específicas.
+            </p>
+          </div>
+          <div class="card">
+            <h4><i class="fas fa-piggy-bank"></i> Inversiones Iniciales</h4>
+            <p>
+              Explorar opciones de bajo riesgo como CETES, SOFIPOS y fondos de
+              inversión.
+            </p>
+          </div>
+        </div>
+
+        <div class="tip">
+          <h4><i class="fas fa-lightbulb"></i> Dato Importante</h4>
+          <p>
+            El 72% de los mexicanos no entiende cómo se calculan los intereses
+            en sus tarjetas. Esta guía te dará herramientas para tomar
+            decisiones informadas.
+          </p>
+        </div>
+
+        <div class="expandable">
+          <div class="expandable-header" onclick="toggleExpandable(this)">
+            <span
+              ><i class="fas fa-question-circle"></i> ¿Por qué es importante
+              tener una tarjeta de crédito?</span
+            >
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="expandable-content">
+            <p>
+              Las tarjetas de crédito bien utilizadas son herramientas poderosas
+              para:
+            </p>
+            <ul>
+              <li>Construir historial crediticio</li>
+              <li>Acceder a beneficios y recompensas</li>
+              <li>Protegerte en compras con seguros incorporados</li>
+              <li>Manejar emergencias financieras</li>
+              <li>Optimizar tus finanzas con MSI (Meses Sin Intereses)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de Tarjetas de Crédito -->
+      <div id="tarjetas" class="section">
+        <h2>
+          <i class="fas fa-credit-card"></i> Tarjetas de Crédito en México
+        </h2>
+
+        <h3><i class="fas fa-cogs"></i> Componentes Clave</h3>
+        <div class="card-grid">
+          <div class="card">
+            <span class="badge">Concepto</span>
+            <h4><i class="fas fa-money-bill-wave"></i> Línea de Crédito</h4>
+            <p>
+              Monto máximo que puedes gastar. En México, los límites iniciales
+              van desde $5,000 hasta $50,000 MXN.
+            </p>
+          </div>
+          <div class="card">
+            <span class="badge">Importante</span>
+            <h4><i class="fas fa-percentage"></i> CAT (Costo Anual Total)</h4>
+            <p>
+              Incluye todos los costos: intereses, comisiones y seguros. En
+              2025, el CAT promedio es del 65%.
+            </p>
+          </div>
+          <div class="card">
+            <span class="badge">Estratégico</span>
+            <h4><i class="fas fa-calendar-alt"></i> Fechas Clave</h4>
+            <p>
+              <strong>Corte:</strong> Fin del periodo de facturación<br /><strong
+                >Pago:</strong
+              >
+              Tienes 20 días después del corte para pagar sin intereses
+            </p>
+          </div>
+        </div>
+
+        <h3><i class="fas fa-balance-scale"></i> Pros y Contras</h3>
+        <div class="card-grid">
+          <div class="card">
+            <h4><i class="fas fa-check-circle"></i> Beneficios</h4>
+            <ul>
+              <li>Construcción de historial crediticio</li>
+              <li>Acceso a recompensas y cashback</li>
+              <li>Protección en compras y viajes</li>
+              <li>Flexibilidad en pagos con MSI</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4><i class="fas fa-exclamation-triangle"></i> Riesgos</h4>
+            <ul>
+              <li>Intereses altos (hasta 85% anual)</li>
+              <li>Comisiones por manejo de cuenta</li>
+              <li>Posible sobreendeudamiento</li>
+              <li>Impacto negativo en Buró de Crédito</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="warning">
+          <h4><i class="fas fa-exclamation-circle"></i> Regla de Oro</h4>
+          <p>
+            Nunca pagues solo el mínimo. Una compra de $1,000 podría terminar
+            costándote $3,500 si solo pagas el mínimo mensual.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sección de Comparativa de Tarjetas -->
+      <div id="comparativa" class="section">
+        <h2><i class="fas fa-chart-bar"></i> Comparativa de Tarjetas 2025</h2>
+
+        <h3>
+          <i class="fas fa-user-graduate"></i> Tarjetas para Principiantes
+        </h3>
+        <div class="card-grid">
+          <div class="card">
+            <span class="badge">#1 Recomendada</span>
+            <h4><i class="fas fa-building"></i> BBVA Básica</h4>
+            <p>
+              <strong>CAT:</strong> 68.5%<br />
+              <strong>Anualidad:</strong> $0 el primer año, $690 después<br />
+              <strong>Beneficios:</strong> Cashback en farmacias y
+              supermercados<br />
+              <strong>Requisitos:</strong> Ingresos desde $6,000/mes
+            </p>
+          </div>
+          <div class="card">
+            <span class="badge">Sin anualidad</span>
+            <h4><i class="fas fa-mobile-alt"></i> Nu Card</h4>
+            <p>
+              <strong>CAT:</strong> 75.2%<br />
+              <strong>Anualidad:</strong> $0 permanente<br />
+              <strong>Beneficios:</strong> App avanzada, notificaciones
+              instantáneas<br />
+              <strong>Requisitos:</strong> Sin historial crediticio necesario
+            </p>
+          </div>
+          <div class="card">
+            <span class="badge">Para jóvenes</span>
+            <h4><i class="fas fa-university"></i> Santander LikeU</h4>
+            <p>
+              <strong>CAT:</strong> 72.8%<br />
+              <strong>Anualidad:</strong> $0 permanente<br />
+              <strong>Beneficios:</strong> Hasta 15% cashback en categorías
+              seleccionadas<br />
+              <strong>Requisitos:</strong> 18-25 años, ingresos desde $4,000/mes
+            </p>
+          </div>
+        </div>
+
+        <h3><i class="fas fa-crown"></i> Tarjetas Premium</h3>
+        <div class="card-grid">
+          <div class="card">
+            <span class="badge">Viajeros</span>
+            <h4><i class="fas fa-plane"></i> AMEX Platinum</h4>
+            <p>
+              <strong>CAT:</strong> 45.3%<br />
+              <strong>Anualidad:</strong> $9,200<br />
+              <strong>Beneficios:</strong> Acceso a salones VIP, seguro de viaje
+              premium<br />
+              <strong>Requisitos:</strong> Ingresos > $80,000/mes
+            </p>
+          </div>
+          <div class="card">
+            <span class="badge">Cashback</span>
+            <h4><i class="fas fa-percent"></i> HSBC 2Now</h4>
+            <p>
+              <strong>CAT:</strong> 58.7%<br />
+              <strong>Anualidad:</strong> $1,850<br />
+              <strong>Beneficios:</strong> 2% cashback en todas las compras<br />
+              <strong>Requisitos:</strong> Ingresos > $25,000/mes
+            </p>
+          </div>
+          <div class="card">
+            <span class="badge">Puntos</span>
+            <h4><i class="fas fa-gem"></i> Citibanamex Premia</h4>
+            <p>
+              <strong>CAT:</strong> 52.4%<br />
+              <strong>Anualidad:</strong> $2,600<br />
+              <strong>Beneficios:</strong> 1.5 puntos por cada $20 pesos
+              gastados<br />
+              <strong>Requisitos:</strong> Ingresos > $30,000/mes
+            </p>
+          </div>
+        </div>
+
+        <h3><i class="fas fa-rocket"></i> Tarjetas Fintech</h3>
+        <div class="card-grid">
+          <div class="card">
+            <span class="badge">Popular</span>
+            <h4><i class="fas fa-credit-card"></i> Nu Card</h4>
+            <p>
+              <strong>CAT:</strong> 75.2%<br />
+              <strong>Anualidad:</strong> $0<br />
+              <strong>Beneficios:</strong> Sin comisiones, app intuitiva<br />
+              <strong>Límite:</strong> $2,000-$50,000 MXN
+            </p>
+          </div>
+          <div class="card">
+            <span class="badge">Cashback</span>
+            <h4><i class="fas fa-credit-card"></i> Klar</h4>
+            <p>
+              <strong>CAT:</strong> 74.9%<br />
+              <strong>Anualidad:</strong> $0<br />
+              <strong>Beneficios:</strong> Hasta 2% cashback<br />
+              <strong>Límite:</strong> $3,000-$40,000 MXN
+            </p>
+          </div>
+          <div class="card">
+            <span class="badge">Flexible</span>
+            <h4><i class="fas fa-credit-card"></i> Stori</h4>
+            <p>
+              <strong>CAT:</strong> 79.5%<br />
+              <strong>Anualidad:</strong> $0<br />
+              <strong>Beneficios:</strong> Aumento rápido de límite<br />
+              <strong>Límite:</strong> $1,500-$30,000 MXN
+            </p>
+          </div>
+          <div class="card">
+            <span class="badge">Internacional</span>
+            <h4><i class="fas fa-credit-card"></i> Ualá</h4>
+            <p>
+              <strong>CAT:</strong> 76.3%<br />
+              <strong>Anualidad:</strong> $0<br />
+              <strong>Beneficios:</strong> Descuentos en comercios<br />
+              <strong>Límite:</strong> $2,500-$45,000 MXN
+            </p>
+          </div>
+        </div>
+
+        <div class="tip">
+          <h4><i class="fas fa-lightbulb"></i> Consejo para elegir tarjeta</h4>
+          <p>
+            Para principiantes, las opciones sin anualidad como Nu, Klar o Stori
+            son excelentes para empezar. Para usuarios con buen historial, las
+            tarjetas con cashback como HSBC 2Now ofrecen mayores beneficios.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sección de Inversiones -->
+      <div id="inversiones" class="section">
+        <h2>
+          <i class="fas fa-chart-line"></i> Inversiones de Bajo Riesgo 2025
+        </h2>
+
+        <h3><i class="fas fa-landmark"></i> CETES - La Inversión Segura</h3>
+        <div class="card">
+          <p>
+            Instrumentos de deuda gubernamental con respaldo del gobierno
+            mexicano.
+          </p>
+          <div class="pros-cons">
+            <div style="flex: 1; padding-right: 15px">
+              <h4><i class="fas fa-check"></i> Ventajas</h4>
+              <ul>
+                <li>Mínimo de inversión: $100 pesos</li>
+                <li>Rendimiento actual: 9.8% - 10.5% anual</li>
+                <li>Riesgo prácticamente nulo</li>
+                <li>Disponible en CETES Directo</li>
+              </ul>
+            </div>
+            <div style="flex: 1; padding-left: 15px">
+              <h4><i class="fas fa-times"></i> Desventajas</h4>
+              <ul>
+                <li>Liquidez al vencimiento</li>
+                <li>Rendimientos variables</li>
+                <li>Requiere cuenta en CETES Directo</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h3>
+          <i class="fas fa-building"></i> SOFIPOS - Rendimientos Atractivos
+        </h3>
+        <div class="investment-table">
+          <table>
+            <thead>
+              <tr>
+                <th>SOFIPO</th>
+                <th>Rendimiento</th>
+                <th>Mínimo</th>
+                <th>Protección</th>
+                <th>Características</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Kubo Financiero</strong></td>
+                <td>12.5% anual</td>
+                <td>$500</td>
+                <td>Hasta $190,000</td>
+                <td>Plazo mínimo 30 días</td>
+              </tr>
+              <tr>
+                <td><strong>FINSUS</strong></td>
+                <td>11.8% anual</td>
+                <td>$100</td>
+                <td>Hasta $190,000</td>
+                <td>Cuenta de ahorro flexible</td>
+              </tr>
+              <tr>
+                <td><strong>SuperTasas</strong></td>
+                <td>13.2% anual</td>
+                <td>$1,000</td>
+                <td>Hasta $190,000</td>
+                <td>Rendimientos competitivos</td>
+              </tr>
+              <tr>
+                <td><strong>YoTePresto</strong></td>
+                <td>14.0% anual</td>
+                <td>$2,500</td>
+                <td>Hasta $190,000</td>
+                <td>Plazos desde 3 meses</td>
+              </tr>
+              <tr>
+                <td><strong>Doopla</strong></td>
+                <td>12.9% anual</td>
+                <td>$1,000</td>
+                <td>Hasta $190,000</td>
+                <td>Enfoque en préstamos P2P</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>
+          <i class="fas fa-mobile-alt"></i> Plataformas Fintech de Inversión
+        </h3>
+        <div class="investment-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Plataforma</th>
+                <th>Rendimiento</th>
+                <th>Mínimo</th>
+                <th>Liquidez</th>
+                <th>Características</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Nu (Cajita Turbo)</strong></td>
+                <td>10.5% anual</td>
+                <td>$1</td>
+                <td>Inmediata</td>
+                <td>Vinculada a cuenta Nu, sin comisiones</td>
+              </tr>
+              <tr>
+                <td><strong>Stori (Cuenta Crece)</strong></td>
+                <td>9.8% anual</td>
+                <td>$1</td>
+                <td>24 horas</td>
+                <td>Vinculada a tarjeta Stori, sin comisiones</td>
+              </tr>
+              <tr>
+                <td><strong>Klar (Inversión)</strong></td>
+                <td>11.2% anual</td>
+                <td>$1</td>
+                <td>Inmediata</td>
+                <td>Cuenta separada de la tarjeta, sin comisiones</td>
+              </tr>
+              <tr>
+                <td><strong>Ualá (Fondos)</strong></td>
+                <td>8.5% - 12% anual</td>
+                <td>$100</td>
+                <td>24-48 horas</td>
+                <td>Diversos fondos, comisiones bajas</td>
+              </tr>
+              <tr>
+                <td><strong>Mercado Pago (Fondo)</strong></td>
+                <td>10.0% anual</td>
+                <td>$1</td>
+                <td>Inmediata</td>
+                <td>Integrado con cuenta MP, sin comisiones</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tip">
+          <h4><i class="fas fa-lightbulb"></i> Comparativa de Rendimientos</h4>
+          <p>
+            Las SOFIPOS ofrecen rendimientos más altos (11-14%) pero con plazos
+            fijos. Las plataformas fintech como Nu y Mercado Pago ofrecen
+            rendimientos más bajos (9-11%) pero con liquidez inmediata.
+          </p>
+        </div>
+
+        <h3><i class="fas fa-calculator"></i> Calculadora de Inversión</h3>
+        <div class="calculator">
+          <div class="calc-group">
+            <label class="calc-label">Monto a invertir (MXN)</label>
+            <input
+              type="number"
+              id="capital"
+              class="calc-input"
+              placeholder="Ej: 10000"
+              min="100"
+              value="10000"
+            />
+          </div>
+
+          <div class="calc-group">
+            <label class="calc-label">Tasa de rendimiento anual (%)</label>
+            <input
+              type="number"
+              id="tasa"
+              class="calc-input"
+              placeholder="Ej: 10"
+              min="1"
+              max="30"
+              value="10"
+            />
+          </div>
+
+          <div class="calc-group">
+            <label class="calc-label">Plazo (meses)</label>
+            <input
+              type="number"
+              id="plazo"
+              class="calc-input"
+              placeholder="Ej: 12"
+              min="1"
+              max="60"
+              value="12"
+            />
+          </div>
+
+          <button
+            class="nav-btn"
+            onclick="calcularRendimiento()"
+            style="width: 100%"
+          >
+            <i class="fas fa-calculator"></i> Calcular Rendimiento
+          </button>
+
+          <div id="resultado" class="calc-result">
+            <!-- Results will appear here -->
+          </div>
+        </div>
+
+        <div class="tip">
+          <h4><i class="fas fa-lightbulb"></i> Estrategia Recomendada</h4>
+          <p>
+            Para principiantes: Comienza con 50% en CETES y 50% en SOFIPOS.
+            Después de 6 meses, diversifica en fondos de inversión de deuda.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sección de Consejos -->
+      <div id="consejos" class="section">
+        <h2><i class="fas fa-lightbulb"></i> Consejos Prácticos</h2>
+
+        <h3><i class="fas fa-credit-card"></i> Uso Inteligente de Tarjetas</h3>
+        <div class="card-grid">
+          <div class="card">
+            <h4><i class="fas fa-percent"></i> Regla del 30%</h4>
+            <p>
+              Nunca uses más del 30% de tu línea de crédito. Esto mejora tu
+              score crediticio.
+            </p>
+          </div>
+          <div class="card">
+            <h4><i class="fas fa-calendar-check"></i> Pago Puntual</h4>
+            <p>
+              Configura pagos automáticos para nunca olvidar una fecha de pago.
+            </p>
+          </div>
+          <div class="card">
+            <h4><i class="fas fa-file-invoice-dollar"></i> Revisión Mensual</h4>
+            <p>
+              Examina cada movimiento para detectar cargos no reconocidos a
+              tiempo.
+            </p>
+          </div>
+        </div>
+
+        <h3><i class="fas fa-chart-pie"></i> Estrategia 50/30/20</h3>
+        <div class="highlight">
+          <p>
+            <strong>50% Gastos Esenciales</strong> (vivienda, comida,
+            transporte)
+          </p>
+          <p>
+            <strong>30% Gastos Personales</strong> (entretenimiento, ropa,
+            hobbies)
+          </p>
+          <p>
+            <strong>20% Ahorro e Inversión</strong> (fondo de emergencia,
+            inversiones, deudas)
+          </p>
+        </div>
+
+        <h3><i class="fas fa-tools"></i> Herramientas Digitales</h3>
+        <div class="card-grid">
+          <div class="card">
+            <h4><i class="fas fa-mobile-alt"></i> Mi Buró de Crédito</h4>
+            <p>Revisa tu historial crediticio gratuitamente una vez al año.</p>
+          </div>
+          <div class="card">
+            <h4><i class="fas fa-chart-line"></i> CETES Directo</h4>
+            <p>
+              Plataforma oficial para invertir en instrumentos gubernamentales.
+            </p>
+          </div>
+          <div class="card">
+            <h4><i class="fas fa-wallet"></i> BBVA Wallet</h4>
+            <p>Controla tus gastos y establece presupuestos mensuales.</p>
+          </div>
+        </div>
+
+        <div class="warning">
+          <h4>
+            <i class="fas fa-exclamation-triangle"></i> Señales de Alerta
+            Financiera
+          </h4>
+          <p>
+            Estas son señales de que podrías estar teniendo problemas con tus
+            finanzas:
+          </p>
+
+          <ul class="alert-list">
+            <li>
+              <i class="fas fa-exclamation-circle"></i>
+              Solo pagas el mínimo de tus tarjetas
+            </li>
+            <li>
+              <i class="fas fa-exclamation-circle"></i>
+              Usas una tarjeta para pagar otra
+            </li>
+            <li>
+              <i class="fas fa-exclamation-circle"></i>
+              No tienes ahorros después de pagar tus gastos
+            </li>
+            <li>
+              <i class="fas fa-exclamation-circle"></i>
+              Solicitas préstamos para gastos cotidianos
+            </li>
+          </ul>
+
+          <p class="tip" style="margin-top: 20px">
+            <i class="fas fa-lightbulb"></i> Si identificas alguna de estas
+            señales en tu vida financiera, es importante que busques ayuda de un
+            asesor financiero.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-top" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <footer>
+      <p>
+        © 2025 Finanzas Personales México | Información actualizada al 1 de
+        Julio 2025
+      </p>
+      <p>
+        Esta guía tiene propósitos informativos únicamente. Consulta a un asesor
+        financiero antes de tomar decisiones importantes.
+      </p>
+
+      <div class="developer-info">
+        <span>Developed by</span>
+        <a href="https://github.com/VictorVeelazquez" target="_blank">
+          VictorVeelazquez <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      // Show/hide sections
+      function showSection(sectionId) {
+        // Hide all sections
+        const sections = document.querySelectorAll(".section");
+        sections.forEach((section) => section.classList.remove("active"));
+
+        // Remove active class from all buttons
+        const buttons = document.querySelectorAll(".nav-btn");
+        buttons.forEach((button) => button.classList.remove("active"));
+
+        // Show selected section
+        document.getElementById(sectionId).classList.add("active");
+
+        // Add active class to clicked button
+        event.target.classList.add("active");
+
+        // Scroll to top
+        scrollToTop();
+      }
+
+      // Toggle expandable content
+      function toggleExpandable(header) {
+        const content = header.nextElementSibling;
+        const icon = header.querySelector(".fa-chevron-down");
+
+        content.classList.toggle("show");
+        icon.classList.toggle("fa-rotate-180");
+      }
+
+      // Investment calculator
+      function calcularRendimiento() {
+        const capital = parseFloat(document.getElementById("capital").value);
+        const tasa = parseFloat(document.getElementById("tasa").value);
+        const plazo = parseInt(document.getElementById("plazo").value);
+
+        if (capital && tasa && plazo) {
+          const rendimiento = (capital * (tasa / 100) * plazo) / 12;
+          const total = capital + rendimiento;
+
+          const resultado = document.getElementById("resultado");
+          resultado.classList.add("show");
+          resultado.innerHTML = `
+                    <p><strong>Inversión Inicial:</strong> $${capital.toLocaleString(
+                      "es-MX"
+                    )}</p>
+                    <p><strong>Rendimiento Ganado:</strong> $${rendimiento
+                      .toFixed(2)
+                      .toLocaleString("es-MX")}</p>
+                    <p><strong>Total Final:</strong> $${total
+                      .toFixed(2)
+                      .toLocaleString("es-MX")}</p>
+                `;
+        } else {
+          alert("Por favor, completa todos los campos correctamente");
+        }
+      }
+
+      // Scroll to top function
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      // Show scroll to top button when scrolling
+      window.addEventListener("scroll", function () {
+        const scrollTopBtn = document.querySelector(".scroll-top");
+        if (window.scrollY > 300) {
+          scrollTopBtn.classList.add("show");
+        } else {
+          scrollTopBtn.classList.remove("show");
+        }
+      });
+
+      // Initialize page
+      document.addEventListener("DOMContentLoaded", function () {
+        // Set first section as active
+        document.querySelector(".section").classList.add("active");
+        document.querySelector(".nav-btn").classList.add("active");
+      });
+    </script>
+  </body>
+</html>
